@@ -4,25 +4,18 @@ public class NumbersReader {
     public static String[] convert(String scannedString) {
         String[] convertedString = new String[3];
         char[] symbols = scannedString.toCharArray();
-        StringBuilder strBuilder = new StringBuilder();
+        int indexOfSign = 0;
 
-        for (int i = 0; i < symbols.length;) {
-            if (Character.isDigit(symbols[i]) || Checker.isPointOrComma(symbols[i])) {
-                while (Character.isDigit(symbols[i]) || Checker.isPointOrComma(symbols[i])) {
-                    strBuilder.append(symbols[i]);
-                    i++;
-                }
-                convertedString[i] = strBuilder.toString();
-                strBuilder.setLength(0);
-            } else if (Character.isSpaceChar(symbols[i]) || Checker.isOperationSign(symbols[i])) {
-                while (Character.isSpaceChar(symbols[i]) || Checker.isOperationSign(symbols[i])) {
-                    strBuilder.append(symbols[i]);
-                    i++;
-                }
-                convertedString[i] = strBuilder.toString().trim();
-                strBuilder.setLength(0);
+        for (int i = 0; i < symbols.length; i++) {
+            if(Checker.isOperationSign(symbols[i])) {
+                indexOfSign = i;
             }
         }
+
+        convertedString[0] = scannedString.substring(0,indexOfSign);
+        convertedString[1] = scannedString.substring(indexOfSign, indexOfSign + 1);
+        convertedString[2] = scannedString.substring(indexOfSign + 1);
+
         return convertedString;
     }
 }
