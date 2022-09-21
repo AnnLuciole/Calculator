@@ -6,7 +6,7 @@ public class NumbersReader {
         char[] symbols = scannedString.toCharArray();
         StringBuilder strBuilder = new StringBuilder();
 
-        for (int i = 0; i < symbols.length();) {
+        for (int i = 0; i < symbols.length;) {
             if (Character.isDigit(symbols[i]) || Checker.isPointOrComma(symbols[i])) {
                 while (Character.isDigit(symbols[i]) || Checker.isPointOrComma(symbols[i])) {
                     strBuilder.append(symbols[i]);
@@ -19,7 +19,7 @@ public class NumbersReader {
                     strBuilder.append(symbols[i]);
                     i++;
                 }
-                convertedString[i] = strBuilder.toString();
+                convertedString[i] = strBuilder.toString().trim();
                 strBuilder.setLength(0);
             }
         }

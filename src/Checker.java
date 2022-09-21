@@ -2,7 +2,7 @@ public class Checker {
 
     public static void checkString(String scannedString) throws Exception {
         char[] symbols = scannedString.toCharArray();
-        for (int i = 0; i < symbols.length(); i++) {
+        for (int i = 0; i < symbols.length; i++) {
 
             if (Character.isLetter(symbols[i])) {
                 throw new MyException("Error! Not number");
