@@ -12,6 +12,9 @@ public class Main {
             Checker.checkString(scannedString);
             String[] convertedString = NumbersReader.convert(scannedString);
             System.out.println(Calculator.calculate(convertedString));
+            FileWriter writer = new FileWriter("output.txt");
+            writer.write(Double.toString(Calculator.calculate(convertedString)));
+            writer.close();
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
