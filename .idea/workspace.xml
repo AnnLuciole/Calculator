@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19263c75-bbc1-4542-aeed-556282a94f36" name="Changes" comment="Fixed bugs">
+    <list default="true" id="19263c75-bbc1-4542-aeed-556282a94f36" name="Changes" comment="Added FileWriter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Checker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NumbersReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NumbersReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +91,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663765728784</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added FileWriter">
+      <created>1663926176265</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663926176265</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added FileWriter">
+      <created>1663926229765</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1663926229765</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -107,6 +123,7 @@
     <MESSAGE value="Created repository for Program" />
     <MESSAGE value="Created all Classses" />
     <MESSAGE value="Fixed bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs" />
+    <MESSAGE value="Added FileWriter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added FileWriter" />
   </component>
 </project>

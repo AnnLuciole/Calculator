@@ -1,21 +1,26 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 
 public class NumbersReader {
 
     public static String[] convert(String scannedString) {
+        ArrayList <String> partsOfString = new ArrayList<>(3);
+        String[] splitedString = scannedString.split(findSign(scannedString));
         String[] convertedString = new String[3];
-        char[] symbols = scannedString.toCharArray();
-        int indexOfSign = 0;
-
-        for (int i = 0; i < symbols.length; i++) {
-            if(Checker.isOperationSign(symbols[i])) {
-                indexOfSign = i;
-            }
-        }
-
-        convertedString[0] = scannedString.substring(0,indexOfSign);
-        convertedString[1] = scannedString.substring(indexOfSign, indexOfSign + 1);
-        convertedString[2] = scannedString.substring(indexOfSign + 1);
 
         return convertedString;
+    }
+
+    private static String findSign(String scannedString){
+        char[] symbols = scannedString.toCharArray();
+        String sign = "";
+        for (int i = 0; i < symbols.length; i++) {
+            if(Checker.isOperationSign(symbols[i])) {
+                sign = Character.toString(symbols[i]);
+            }
+        }
+        return sign;
     }
 }

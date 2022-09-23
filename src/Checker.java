@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+
 public class Checker {
 
     public static void checkString(String scannedString) throws Exception {
