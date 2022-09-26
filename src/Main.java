@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -12,18 +13,20 @@ public class Main {
             Scanner sc = new Scanner(reader);
             input.createNewFile();
             output.createNewFile();
+            ArrayList<String> dataFromFile = new ArrayList<>();
             while (sc.hasNextByte()) {
-                String scannedString = sc.nextLine().trim();
+                String scannedString = sc.nextLine();
+                if (scannedString != "") {
+                    dataFromFile.add(scannedString);
+                }
+            }
+            for (String scannedString : dataFromFile) {
                 try {
                     Checker.checkString(scannedString);
-                    String[] convertedString = NumbersReader.convert(scannedString);
-                    System.out.println(Calculator.calculate(convertedString));
+                    NumbersReader.DataForCalculator convertedString = NumbersReader.convert(scannedString);
                     result = result + scannedString + " = " + Calculator.calculate(convertedString) + "\n" + "\n";
-                    if (sc.nextLine() == null) {
-                        result = result + "\n";
-                    }
                 } catch (MyException ex) {
-                    result = result + scannedString + " = " + ex.getMessage() + "\n";
+                    result = result + scannedString + " = " + ex.getMessage() + "\n" + "\n";
                 }
             }
         } catch (Exception ex) {
