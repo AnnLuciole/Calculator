@@ -5,14 +5,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        File input = new File("C:\\Users\\Manager\\IdeaProjects\\Program\\input.txt");
-        File output = new File("C:\\Users\\Manager\\IdeaProjects\\Program\\output.txt");
         String result = "";
 
-        try (FileReader reader = new FileReader(input)) {
+        try (FileReader reader = new FileReader("input.txt")) {
             Scanner sc = new Scanner(reader);
-            input.createNewFile();
-            output.createNewFile();
             ArrayList<String> dataFromFile = new ArrayList<>();
             while (sc.hasNextByte()) {
                 String scannedString = sc.nextLine();
@@ -33,7 +29,7 @@ public class Main {
             System.out.println(ex.getMessage());
         }
 
-        try (FileWriter writer = new FileWriter(output, true)) {
+        try (FileWriter writer = new FileWriter("output.txt", true)) {
             writer.write(result);
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
