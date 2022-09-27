@@ -1,21 +1,37 @@
-
 public class NumbersReader {
 
-    public static String[] convert(String scannedString) {
-        String[] convertedString = new String[3];
-        char[] symbols = scannedString.toCharArray();
-        int indexOfSign = 0;
+    public static class DataForCalculator {
+        private double numberOne;
+        private double numberTwo;
+        private String signOfEqualation;
 
-        for (int i = 0; i < symbols.length; i++) {
-            if(Checker.isOperationSign(symbols[i])) {
-                indexOfSign = i;
-            }
+        DataForCalculator(double numberOne, double numberTwo, String signOfEqualation){
+            this.numberOne = numberOne;
+            this.numberTwo = numberTwo;
+            this.signOfEqualation = signOfEqualation;
         }
 
-        convertedString[0] = scannedString.substring(0,indexOfSign);
-        convertedString[1] = scannedString.substring(indexOfSign, indexOfSign + 1);
-        convertedString[2] = scannedString.substring(indexOfSign + 1);
+        public double getNumberOne() {
+            return numberOne;
+        }
 
-        return convertedString;
+        public double getNumberTwo() {
+            return numberTwo;
+        }
+
+        public String getSignOfEqualation() {
+            return signOfEqualation;
+        }
+    }
+
+    public static DataForCalculator convert(String scannedString) {
+
+        String[] numbersForEqualation = scannedString.trim().split(" ");
+
+        double numberOne = Double.parseDouble(numbersForEqualation[0]);
+        String signOfEqualation = numbersForEqualation[1];
+        double numberTwo = Double.parseDouble(numbersForEqualation[2]);
+
+        return new DataForCalculator(numberOne, numberTwo, signOfEqualation);
     }
 }

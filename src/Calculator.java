@@ -1,10 +1,10 @@
 public class Calculator {
 
-    public static double calculate (String[] convertedString) throws Exception {
-        double a = Double.parseDouble(convertedString[0]);
-        double b = Double.parseDouble(convertedString[2]);
+    public static double calculate (NumbersReader.DataForCalculator convertedString) throws Exception {
+        double a = convertedString.getNumberOne();
+        double b = convertedString.getNumberTwo();
         double result;
-        switch (convertedString[1]) {
+        switch (convertedString.getSignOfEqualation()) {
             case "+": result = a + b;
                 break;
             case "-": result = a - b;
