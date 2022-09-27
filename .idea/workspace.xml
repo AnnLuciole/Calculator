@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19263c75-bbc1-4542-aeed-556282a94f36" name="Changes" comment="Убрано создание файлов.">
+    <list default="true" id="19263c75-bbc1-4542-aeed-556282a94f36" name="Changes" comment="Время выполнения доведено до необходимого.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +55,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
@@ -127,7 +127,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664195810848</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Время выполнения доведено до необходимого.">
+      <created>1664274274080</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664274274080</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Время выполнения доведено до необходимого.">
+      <created>1664275302151</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664275302151</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,6 +162,7 @@
     <MESSAGE value="Added FileWriter" />
     <MESSAGE value="Нужно переделать метод convert" />
     <MESSAGE value="Убрано создание файлов." />
-    <option name="LAST_COMMIT_MESSAGE" value="Убрано создание файлов." />
+    <MESSAGE value="Время выполнения доведено до необходимого." />
+    <option name="LAST_COMMIT_MESSAGE" value="Время выполнения доведено до необходимого." />
   </component>
 </project>
