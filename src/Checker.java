@@ -1,29 +1,23 @@
-import java.io.FileWriter;
-
 public class Checker {
 
     public static void checkString(String scannedString) throws Exception {
         char[] symbols = scannedString.toCharArray();
-        for (int i = 0; i < symbols.length; i++) {
+        for (char symbol : symbols) {
 
-            if (Character.isLetter(symbols[i])) {
+            if (Character.isLetter(symbol)) {
                 throw new MyException("Error! Not number");
             }
 
-            if (!Checker.isPermittedSign(symbols[i])) {
+            if (!Checker.isPermittedSign(symbol)) {
                 throw new MyException("Operation Error!");
             }
         }
     }
 
     private static boolean isPermittedSign(char sign) {
-        if (Character.isDigit(sign)) {
+        if (Character.isDigit(sign) || Character.isSpaceChar(sign)) {
             return true;
-        } else if (Character.isSpaceChar(sign)) {
-            return true;
-        } else if (Checker.isPointOrComma(sign)) {
-            return true;
-        } else if (Checker.isOperationSign(sign)) {
+        } else if (Checker.isPointOrComma(sign) || Checker.isOperationSign(sign)) {
             return true;
         }
         return false;

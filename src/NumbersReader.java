@@ -22,18 +22,6 @@ public class NumbersReader {
         public String getSignOfEqualation() {
             return signOfEqualation;
         }
-
-        public void setNumberOne(double numberOne) {
-            this.numberOne = numberOne;
-        }
-
-        public void setNumberTwo(double numberTwo) {
-            this.numberTwo = numberTwo;
-        }
-
-        public void setSignOfEqualation(String signOfEqualation) {
-            this.signOfEqualation = signOfEqualation;
-        }
     }
 
     public static DataForCalculator convert(String scannedString) {
